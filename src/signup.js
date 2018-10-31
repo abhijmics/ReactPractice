@@ -1,6 +1,6 @@
 import React from "react";
 
-export class SignIn extends React.Component {
+export class SignUn extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -33,7 +33,7 @@ export class SignIn extends React.Component {
   render() {
     return (
       <div>
-        <h1>Sign In</h1>
+        <h1>Sign up</h1>
         <form>
           <p> Login</p>
           <p>
@@ -63,4 +63,4 @@ export class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+export default SignUn;

@@ -1,16 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import SignIn from "./signin";
-
-class Input extends React.Component {
+import SignUp from "./signup";
+import { Link, Route, BrowserRouter } from "react-router-dom";
+class RouterDemo extends React.Component {
   constructor() {
     super();
     this.state = { msg: " " };
   }
 
   render() {
-    return <SignIn />;
+    return (
+      <div>
+        <Link to="/signin">SignIn</Link>
+        <Link to="/signup">SignUp</Link>
+
+        <Route path="/signup" component={SignUp} />
+        <Route path="/signin" component={SignIn} />
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<Input />, document.getElementById("root"));
+ReactDOM.render(
+  <BrowserRouter>
+    <RouterDemo />
+  </BrowserRouter>,
+  document.getElementById("root")
+);

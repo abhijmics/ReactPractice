@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import SignIn from "./signin";
 import SignUp from "./signup";
+import Home from "./home";
 import { Link, Route, BrowserRouter } from "react-router-dom";
 class RouterDemo extends React.Component {
+  
   constructor() {
     super();
     this.state = { msg: " " };
@@ -12,6 +14,8 @@ class RouterDemo extends React.Component {
   render() {
     return (
       <div>
+
+
         <Link to="/signin">SignIn</Link>
         <Link to="/signup">SignUp</Link>
 
@@ -26,5 +30,6 @@ ReactDOM.render(
   <BrowserRouter>
     <RouterDemo />
   </BrowserRouter>,
-  document.getElementById("root")
+
+  document.getElementById("root");
 );

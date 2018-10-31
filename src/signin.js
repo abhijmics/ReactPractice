@@ -1,3 +1,4 @@
+
 import React from "react";
 
 export class SignIn extends React.Component {
@@ -13,17 +14,25 @@ export class SignIn extends React.Component {
     alert(this.state.name + ":" + this.state.email);
   };
 
+
   nameHandler = event => {
     this.setState({ name: event.target.value });
   };
+
 
   emailHandler = event => {
     this.setState({ email: event.target.value });
   };
 
+
+  componentWillMount(){
+    if(this.ref.login)
+  }
+
   validate = () => {
     if (this.refs.login.value == "test" && this.refs.pass.value == "1234") {
       this.setState({ msg: "Login Successful.." });
+      this.props.history.push("/");
     } else this.setState({ msg: "Login Failed" });
   };
 

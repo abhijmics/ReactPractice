@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import SignIn from "./signin";
 
-class ToDo extends React.Component {
+class Input extends React.Component {
   constructor() {
     super();
-    this.state = { msg: "Hello World!!!!" };
+    this.state = { msg: " " };
   }
+
   render() {
-    return <h3> This is a ToDo Comp : (this.state.msg)</h3>;
+    return <SignIn />;
   }
 }
 
-ReactDOM.render(<ToDO />, document.getElementById("root"));
+ReactDOM.render(<Input />, document.getElementById("root"));
